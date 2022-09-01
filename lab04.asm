@@ -58,6 +58,56 @@
          mov ah, 07
          int 21h
          mov ah, 02
+         
+         MOV AH,02    
+         MOV CL,0 
+         MOV DL,65
+       
+       VOLTA4:
+            INT 21H
+            MOV BL,DL
+            MOV DL,10   
+            INT 21H 
+            MOV DL,BL   
+            ADD DL,1
+            ADD BL,1
+            INC CL
+            CMP CL,10   
+            JNZ VOLTA4
+       MOV AH,07
+       INT 21H  
+      
+       MOV AH,02    
+       MOV CL,0 
+     VOLTA5:
+        INT 21H
+            MOV BL,DL
+            MOV DL,10   
+            INT 21H 
+            MOV DL,BL   
+            ADD DL,1
+            ADD BL,1
+            INC CL
+            CMP CL,10   
+            JNZ VOLTA5
+         MOV AH,07
+         INT 21H   
+     
+       MOV AH,02    
+       MOV CL,0 
+       VOLTA6:
+        INT 21H
+            MOV BL,DL
+            MOV DL,10   
+            INT 21H 
+            MOV DL,BL   
+            ADD DL,1
+            ADD BL,1
+            INC CL
+            CMP CL,6   
+            JNZ VOLTA6
+         MOV AH,07
+         INT 21H
         
  ;NUMEROS DE 0 A 9           
         mov cl, 0
